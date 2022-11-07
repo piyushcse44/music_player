@@ -6,6 +6,8 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -126,7 +128,8 @@ public class Play_music extends AppCompatActivity {
       //  set all values 0 as the new music going to start
         seekBar.setProgress(0);
         welcome.setText(""+arrayList.get(pos[0]).getName());
-        welcome.setSelected(true);
+        Animation animation = AnimationUtils.loadAnimation(this, android.R.anim.slide_in_left);
+        welcome.startAnimation(animation);
 
      //  new music starts here
         Uri uri =Uri.parse(arrayList.get(pos[0]).toString());

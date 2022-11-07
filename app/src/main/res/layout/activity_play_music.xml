@@ -8,48 +8,43 @@
 
     <TextView
         android:id="@+id/Welcome"
-        android:layout_width="wrap_content"
-        android:layout_height="17dp"
-        android:ellipsize="marquee"
-        android:fadingEdge="horizontal"
-        android:fontFamily="sans-serif"
-        android:marqueeRepeatLimit="marquee_forever"
-        android:paddingTop="7dp"
-        android:paddingBottom="7dp"
-        android:scrollHorizontally="true"
-        android:singleLine="true"
-        android:text="@string/welcome_to_music_player"
-        android:textColor="#0C0C0C"
-        android:textSize="16sp"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_20sdp"
+       app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.48"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="497dp" />
+       app:layout_constraintTop_toBottomOf="@+id/imageView"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text="@string/app_name"
+        />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="150dp" />
+        app:layout_constraintGuide_end="@dimen/_144sdp" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="217dp"
-        android:layout_height="199dp"
-        android:background="#AB11D4"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_190sdp"
         android:contentDescription="@string/imageview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.426"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/music"
-        tools:layout_editor_absoluteY="161dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_50sdp"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/play_pauseimageView2"
-        android:layout_width="86dp"
-        android:layout_height="62dp"
-        android:layout_marginBottom="36dp"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_54sdp"
+        android:layout_marginBottom="@dimen/_30sdp"
         android:contentDescription="@string/todo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/next"
@@ -60,12 +55,12 @@
 
     <ImageView
         android:id="@+id/previous"
-        android:layout_width="72dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="36dp"
+        android:layout_width="@dimen/_62sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginBottom="@dimen/_40sdp"
         android:contentDescription="@string/prev"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_5sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/play_pauseimageView2"
         app:layout_constraintHorizontal_bias="0.5"
@@ -75,12 +70,12 @@
 
     <ImageView
         android:id="@+id/next"
-        android:layout_width="72dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="40dp"
+        android:layout_width="@dimen/_62sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginBottom="@dimen/_40sdp"
         android:contentDescription="@string/next"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_5sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -90,8 +85,8 @@
     <SeekBar
         android:id="@+id/seekBar"
         android:layout_width="0dp"
-        android:layout_height="42dp"
-        android:layout_marginBottom="52dp"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_marginBottom="@dimen/_40sdp"
         android:paddingStart="100dip"
         android:paddingEnd="100dip"
         android:scaleX="2"
@@ -105,9 +100,9 @@
         android:id="@+id/_start_counter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="284dp"
-        android:layout_marginBottom="40dp"
-        android:text="TextView"
+        android:layout_marginEnd="@dimen/_100sdp"
+        android:layout_marginBottom="@dimen/_35sdp"
+        android:text="@string/textview"
         app:layout_constraintBottom_toTopOf="@+id/previous"
         app:layout_constraintEnd_toStartOf="@+id/guideline2" />
 
@@ -115,9 +110,9 @@
         android:id="@+id/end_counter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginBottom="28dp"
-        android:text="TextView"
+        android:layout_marginStart="@dimen/_91sdp"
+        android:layout_marginBottom="@dimen/_35sdp"
+        android:text="@string/textview"
         app:layout_constraintBottom_toTopOf="@+id/next"
         app:layout_constraintStart_toStartOf="@+id/guideline2" />
 
